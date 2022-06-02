@@ -260,9 +260,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Servo.cpp">
+    <Compile Include="23.1.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="Servo.cpp">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\libraries\Servo\src\avr\Servo.cpp">
       <SubType>compile</SubType>
     </Compile>

@@ -68,7 +68,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../Servo.cpp \
+../23.1.cpp \
 ../src/libraries/Servo/src/avr/Servo.cpp \
 ../src/libraries/Servo/src/mbed/Servo.cpp \
 ../src/libraries/Servo/src/megaavr/Servo.cpp \
@@ -89,7 +89,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-Servo.o \
+23.1.o \
 src/libraries/Servo/src/avr/Servo.o \
 src/libraries/Servo/src/mbed/Servo.o \
 src/libraries/Servo/src/megaavr/Servo.o \
@@ -103,7 +103,7 @@ src/libraries/LiquidCrystal/src/LiquidCrystal.o \
 Function/LeapYearFunc.o
 
 OBJS_AS_ARGS +=  \
-Servo.o \
+23.1.o \
 src/libraries/Servo/src/avr/Servo.o \
 src/libraries/Servo/src/mbed/Servo.o \
 src/libraries/Servo/src/megaavr/Servo.o \
@@ -117,7 +117,7 @@ src/libraries/LiquidCrystal/src/LiquidCrystal.o \
 Function/LeapYearFunc.o
 
 C_DEPS +=  \
-Servo.d \
+23.1.d \
 src/libraries/Servo/src/avr/Servo.d \
 src/libraries/Servo/src/mbed/Servo.d \
 src/libraries/Servo/src/megaavr/Servo.d \
@@ -131,7 +131,7 @@ src/libraries/LiquidCrystal/src/LiquidCrystal.d \
 Function/LeapYearFunc.d
 
 C_DEPS_AS_ARGS +=  \
-Servo.d \
+23.1.d \
 src/libraries/Servo/src/avr/Servo.d \
 src/libraries/Servo/src/mbed/Servo.d \
 src/libraries/Servo/src/megaavr/Servo.d \
@@ -159,7 +159,7 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-./Servo.o: .././Servo.cpp
+./23.1.o: .././23.1.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
