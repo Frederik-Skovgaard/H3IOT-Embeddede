@@ -36,10 +36,22 @@ SUBDIRS :=  \
 ../Function \
 ../include/ \
 ../include/libraries/ \
+../include/libraries/Adafruit_BusIO/ \
+../include/libraries/Adafruit_GFX_Library/ \
+../include/libraries/Adafruit_GFX_Library/examples/ \
+../include/libraries/Adafruit_GFX_Library/examples/GFXcanvas/ \
+../include/libraries/Adafruit_GFX_Library/Fonts/ \
+../include/libraries/Adafruit_SSD1306/ \
+../include/libraries/Adafruit_Unified_Sensor/ \
+../include/libraries/DHT_sensor_library/ \
+../include/libraries/DS1307RTC/ \
+../include/libraries/DS3231/ \
 ../include/libraries/Keypad/ \
 ../include/libraries/Keypad/src/ \
 ../include/libraries/LiquidCrystal/ \
 ../include/libraries/LiquidCrystal/src/ \
+../include/libraries/MFRC522/ \
+../include/libraries/MFRC522/src/ \
 ../include/libraries/Servo/ \
 ../include/libraries/Servo/src/ \
 ../include/libraries/Servo/src/avr/ \
@@ -49,12 +61,30 @@ SUBDIRS :=  \
 ../include/libraries/Servo/src/samd/ \
 ../include/libraries/Servo/src/sam/ \
 ../include/libraries/Servo/src/stm32f4/ \
+../include/libraries/SPI/ \
+../include/libraries/SPI/src/ \
+../include/libraries/Time/ \
+../include/libraries/Wire/ \
+../include/libraries/Wire/src/ \
+../include/libraries/Wire/src/utility/ \
 ../src/ \
 ../src/libraries/ \
+../src/libraries/Adafruit_BusIO/ \
+../src/libraries/Adafruit_GFX_Library/ \
+../src/libraries/Adafruit_GFX_Library/examples/ \
+../src/libraries/Adafruit_GFX_Library/fontconvert/ \
+../src/libraries/Adafruit_GFX_Library/GFXcanvas/ \
+../src/libraries/Adafruit_SSD1306/ \
+../src/libraries/Adafruit_Unified_Sensor/ \
+../src/libraries/DHT_sensor_library/ \
+../src/libraries/DS1307RTC/ \
+../src/libraries/DS3231/ \
 ../src/libraries/Keypad/ \
 ../src/libraries/Keypad/src/ \
 ../src/libraries/LiquidCrystal/ \
 ../src/libraries/LiquidCrystal/src/ \
+../src/libraries/MFRC522/ \
+../src/libraries/MFRC522/src/ \
 ../src/libraries/Servo/ \
 ../src/libraries/Servo/src/ \
 ../src/libraries/Servo/src/avr/ \
@@ -63,12 +93,40 @@ SUBDIRS :=  \
 ../src/libraries/Servo/src/nrf52/ \
 ../src/libraries/Servo/src/samd/ \
 ../src/libraries/Servo/src/sam/ \
-../src/libraries/Servo/src/stm32f4/
+../src/libraries/Servo/src/stm32f4/ \
+../src/libraries/SPI/ \
+../src/libraries/SPI/src/ \
+../src/libraries/Time/ \
+../src/libraries/Wire/ \
+../src/libraries/Wire/src/ \
+../src/libraries/Wire/src/utility/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../23.1.cpp \
+../DHT11.cpp \
+../src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.cpp \
+../src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp \
+../src/libraries/DHT_sensor_library/DHT.cpp \
+../src/libraries/DHT_sensor_library/DHT_U.cpp \
+../src/libraries/DS1307RTC/DS1307RTC.cpp \
+../src/libraries/DS3231/DS3231.cpp \
+../src/libraries/Time/DateStrings.cpp \
+../src/libraries/Time/Time.cpp \
+../src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp \
+../src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp \
+../src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp \
+../src/libraries/Adafruit_GFX_Library/Adafruit_GFX.cpp \
+../src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.cpp \
+../src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.cpp \
+../src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.c \
+../src/libraries/Adafruit_GFX_Library/glcdfont.c \
+../src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.cpp \
+../src/libraries/Wire/src/utility/twi.c \
+../src/libraries/Wire/src/Wire.cpp \
+../src/libraries/MFRC522/src/MFRC522.cpp \
+../src/libraries/MFRC522/src/MFRC522Extended.cpp \
+../src/libraries/SPI/src/SPI.cpp \
 ../src/libraries/Servo/src/avr/Servo.cpp \
 ../src/libraries/Servo/src/mbed/Servo.cpp \
 ../src/libraries/Servo/src/megaavr/Servo.cpp \
@@ -89,7 +147,29 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-23.1.o \
+DHT11.o \
+src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.o \
+src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.o \
+src/libraries/DHT_sensor_library/DHT.o \
+src/libraries/DHT_sensor_library/DHT_U.o \
+src/libraries/DS1307RTC/DS1307RTC.o \
+src/libraries/DS3231/DS3231.o \
+src/libraries/Time/DateStrings.o \
+src/libraries/Time/Time.o \
+src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.o \
+src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.o \
+src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o \
+src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o \
+src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.o \
+src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.o \
+src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.o \
+src/libraries/Adafruit_GFX_Library/glcdfont.o \
+src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o \
+src/libraries/Wire/src/utility/twi.o \
+src/libraries/Wire/src/Wire.o \
+src/libraries/MFRC522/src/MFRC522.o \
+src/libraries/MFRC522/src/MFRC522Extended.o \
+src/libraries/SPI/src/SPI.o \
 src/libraries/Servo/src/avr/Servo.o \
 src/libraries/Servo/src/mbed/Servo.o \
 src/libraries/Servo/src/megaavr/Servo.o \
@@ -103,7 +183,29 @@ src/libraries/LiquidCrystal/src/LiquidCrystal.o \
 Function/LeapYearFunc.o
 
 OBJS_AS_ARGS +=  \
-23.1.o \
+DHT11.o \
+src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.o \
+src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.o \
+src/libraries/DHT_sensor_library/DHT.o \
+src/libraries/DHT_sensor_library/DHT_U.o \
+src/libraries/DS1307RTC/DS1307RTC.o \
+src/libraries/DS3231/DS3231.o \
+src/libraries/Time/DateStrings.o \
+src/libraries/Time/Time.o \
+src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.o \
+src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.o \
+src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o \
+src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o \
+src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.o \
+src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.o \
+src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.o \
+src/libraries/Adafruit_GFX_Library/glcdfont.o \
+src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o \
+src/libraries/Wire/src/utility/twi.o \
+src/libraries/Wire/src/Wire.o \
+src/libraries/MFRC522/src/MFRC522.o \
+src/libraries/MFRC522/src/MFRC522Extended.o \
+src/libraries/SPI/src/SPI.o \
 src/libraries/Servo/src/avr/Servo.o \
 src/libraries/Servo/src/mbed/Servo.o \
 src/libraries/Servo/src/megaavr/Servo.o \
@@ -117,7 +219,29 @@ src/libraries/LiquidCrystal/src/LiquidCrystal.o \
 Function/LeapYearFunc.o
 
 C_DEPS +=  \
-23.1.d \
+DHT11.d \
+src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.d \
+src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.d \
+src/libraries/DHT_sensor_library/DHT.d \
+src/libraries/DHT_sensor_library/DHT_U.d \
+src/libraries/DS1307RTC/DS1307RTC.d \
+src/libraries/DS3231/DS3231.d \
+src/libraries/Time/DateStrings.d \
+src/libraries/Time/Time.d \
+src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.d \
+src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.d \
+src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.d \
+src/libraries/Adafruit_GFX_Library/Adafruit_GFX.d \
+src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.d \
+src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.d \
+src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.d \
+src/libraries/Adafruit_GFX_Library/glcdfont.d \
+src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.d \
+src/libraries/Wire/src/utility/twi.d \
+src/libraries/Wire/src/Wire.d \
+src/libraries/MFRC522/src/MFRC522.d \
+src/libraries/MFRC522/src/MFRC522Extended.d \
+src/libraries/SPI/src/SPI.d \
 src/libraries/Servo/src/avr/Servo.d \
 src/libraries/Servo/src/mbed/Servo.d \
 src/libraries/Servo/src/megaavr/Servo.d \
@@ -131,7 +255,29 @@ src/libraries/LiquidCrystal/src/LiquidCrystal.d \
 Function/LeapYearFunc.d
 
 C_DEPS_AS_ARGS +=  \
-23.1.d \
+DHT11.d \
+src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.d \
+src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.d \
+src/libraries/DHT_sensor_library/DHT.d \
+src/libraries/DHT_sensor_library/DHT_U.d \
+src/libraries/DS1307RTC/DS1307RTC.d \
+src/libraries/DS3231/DS3231.d \
+src/libraries/Time/DateStrings.d \
+src/libraries/Time/Time.d \
+src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.d \
+src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.d \
+src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.d \
+src/libraries/Adafruit_GFX_Library/Adafruit_GFX.d \
+src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.d \
+src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.d \
+src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.d \
+src/libraries/Adafruit_GFX_Library/glcdfont.d \
+src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.d \
+src/libraries/Wire/src/utility/twi.d \
+src/libraries/Wire/src/Wire.d \
+src/libraries/MFRC522/src/MFRC522.d \
+src/libraries/MFRC522/src/MFRC522Extended.d \
+src/libraries/SPI/src/SPI.d \
 src/libraries/Servo/src/avr/Servo.d \
 src/libraries/Servo/src/mbed/Servo.d \
 src/libraries/Servo/src/megaavr/Servo.d \
@@ -159,87 +305,241 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-./23.1.o: .././23.1.cpp
+./DHT11.o: .././DHT11.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.o: ../src/libraries/Adafruit_GFX_Library/GFXcanvas/GFXcanvasSerialDemo.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.o: ../src/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/DHT_sensor_library/DHT.o: ../src/libraries/DHT_sensor_library/DHT.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/DHT_sensor_library/DHT_U.o: ../src/libraries/DHT_sensor_library/DHT_U.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/DS1307RTC/DS1307RTC.o: ../src/libraries/DS1307RTC/DS1307RTC.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/DS3231/DS3231.o: ../src/libraries/DS3231/DS3231.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Time/DateStrings.o: ../src/libraries/Time/DateStrings.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Time/Time.o: ../src/libraries/Time/Time.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.o: ../src/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.o: ../src/libraries/Adafruit_BusIO/Adafruit_I2CDevice.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o: ../src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o: ../src/libraries/Adafruit_GFX_Library/Adafruit_GFX.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.o: ../src/libraries/Adafruit_GFX_Library/Adafruit_GrayOLED.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.o: ../src/libraries/Adafruit_GFX_Library/Adafruit_SPITFT.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.o: ../src/libraries/Adafruit_GFX_Library/fontconvert/fontconvert.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu99 -std=gnu11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_GFX_Library/glcdfont.o: ../src/libraries/Adafruit_GFX_Library/glcdfont.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu99 -std=gnu11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o: ../src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Wire/src/utility/twi.o: ../src/libraries/Wire/src/utility/twi.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu99 -std=gnu11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/Wire/src/Wire.o: ../src/libraries/Wire/src/Wire.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/MFRC522/src/MFRC522.o: ../src/libraries/MFRC522/src/MFRC522.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/MFRC522/src/MFRC522Extended.o: ../src/libraries/MFRC522/src/MFRC522Extended.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/libraries/SPI/src/SPI.o: ../src/libraries/SPI/src/SPI.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/avr/Servo.o: ../src/libraries/Servo/src/avr/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/mbed/Servo.o: ../src/libraries/Servo/src/mbed/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/megaavr/Servo.o: ../src/libraries/Servo/src/megaavr/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/nrf52/Servo.o: ../src/libraries/Servo/src/nrf52/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/samd/Servo.o: ../src/libraries/Servo/src/samd/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/sam/Servo.o: ../src/libraries/Servo/src/sam/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Servo/src/stm32f4/Servo.o: ../src/libraries/Servo/src/stm32f4/Servo.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Keypad/src/Key.o: ../src/libraries/Keypad/src/Key.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/Keypad/src/Keypad.o: ../src/libraries/Keypad/src/Keypad.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 src/libraries/LiquidCrystal/src/LiquidCrystal.o: ../src/libraries/LiquidCrystal/src/LiquidCrystal.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Function/LeapYearFunc.o: ../Function/LeapYearFunc.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000L -DARDUINO=108019 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -DUSB_VID=0x2341 -DUSB_PID=0x0010 -DUSB_MANUFACTURER="\"Arduino LLC\""  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include" -I"..\\..\ArduinoCore\include\core" -I"..\\..\ArduinoCore\include\variants\mega" -I"..\include\libraries\LiquidCrystal\src" -I"..\include\libraries\Keypad\src" -I"..\include\libraries\Servo\src" -I"..\include\libraries\Servo\src\avr" -I"..\include\libraries\Servo\src\mbed" -I"..\include\libraries\Servo\src\megaavr" -I"..\include\libraries\Servo\src\nrf52" -I"..\include\libraries\Servo\src\sam" -I"..\include\libraries\Servo\src\samd" -I"..\include\libraries\Servo\src\stm32f4" -I"..\include\libraries\SPI\src" -I"..\include\libraries\MFRC522\src" -I"..\include\libraries\Wire\src" -I"..\include\libraries\Wire\src\utility" -I"..\include\libraries\Adafruit_BusIO" -I"..\include\libraries\Adafruit_GFX_Library" -I"..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas" -I"..\include\libraries\Adafruit_GFX_Library\Fonts" -I"..\include\libraries\Adafruit_SSD1306" -I"..\include\libraries\DS3231" -I"..\include\libraries\Time" -I"..\include\libraries\DS1307RTC" -I"..\include\libraries\DHT_sensor_library" -I"..\include\libraries\Adafruit_Unified_Sensor"  -O0 -fno-threadsafe-statics -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -w -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560" -c -std=gnu++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
