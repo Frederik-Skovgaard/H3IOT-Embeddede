@@ -1,0 +1,80 @@
+#include <LiquidCrystal.h>
+#include <DHT.h>
+
+#define DHTPIN 8  
+#define DHTTYPE DHT11  
+
+DHT dht(DHTPIN, DHTTYPE);
+
+const int rs = 2, en = 3, d4 = 4, d5 = 5, d6 = 6, d7 = 7;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+int pinArray[] = {22, 23, 24, 25, 26, 27, 28, 29};
+int count = 0;
+
+//Symbol for celsius
+char celsius = 0xDF;
+
+//Will store last time the display was updated
+unsigned long previousMillis = 0;
+
+//Interval at which to print
+unsigned long interval = 1000;
+
+
+void setup() {      
+  //Print to display
+  lcd.begin(16, 2);
+  lcd.print("Temp");
+  
+  lcd.setCursor(11, 0);
+  lcd.print(celsius);
+  lcd.print("C"); 
+
+  lcd.setCursor(0, 1);
+  lcd.print("RH");
+  
+  lcd.setCursor(11, 1);
+  lcd.print("%"); 
+  
+  //Add serial terminal
+  Serial.begin(9600);
+
+  dht.begin();
+
+  for(count = 0; count < sizeof(pinArray)/2; count++) {
+      pinMode(pinArray[count], OUTPUT);
+    }
+  }
+
+void loop() {
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  
+  //Variable for storing how many milliseconds the program has been running
+  unsigned long currentMillis = millis();
+    
+  
+  //Every one seconds it updates the display
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+    
+    lcd.setCursor(6, 0);
+    lcd.print(t);
+
+    lcd.setCursor(6, 1);
+    lcd.print(h);
+  }
+
+  for (count = 0; count < sizeof(pinArray) /2; count++) {
+    digitalWrite(pinArray[count], HIGH);
+    delay(75);
+    digitalWrite(pinArray[count], LOW);
+  }
+
+  for (count = sizeof(pinArray) / 2 - 1; count >= 0; count--) {
+    digitalWrite(pinArray[count], HIGH);
+    delay(75);
+    digitalWrite(pinArray[count], LOW);
+  }
+}
